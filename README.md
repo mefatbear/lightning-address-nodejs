@@ -26,11 +26,11 @@ This will allow your to receive lightning address payments. It's like an email a
 
 ## Config
 
-| Env Var                        | Required | Description                        |
-| ------------------------------ | -------- | ---------------------------------- |
-| `LNADDR_LND_REST_BASE_URL`     | true     | Your LND REST URL `.onion` address |
-| `LNADDR_LND_REST_MACAROON_HEX` | true     | Create Invoice Macaroon            |
-| `LNADDR_DOMAIN`                | true     | Your domain name e.g. `fatbear.me` |
+| Env Var                        | Required | Description                                              |
+| ------------------------------ | -------- | -------------------------------------------------------- |
+| `LNADDR_LND_REST_BASE_URL`     | true     | Your LND REST URL e.g. `https://xxxx.onion:8080` address |
+| `LNADDR_LND_REST_MACAROON_HEX` | true     | Create Invoice Macaroon                                  |
+| `LNADDR_DOMAIN`                | true     | Your domain name e.g. `fatbear.me`                       |
 
 ## Endpoints
 
@@ -59,7 +59,7 @@ There are a few additional setups required for this to work on your Umbrel node.
 STEPS:
 
 1. SSH to your umbrel server `ssh umbrel@umbrel.local` you will need your umbrel password
-2. Find your LND REST browser URL `cat umbrel/tor/data/lnd-rest/hostname`. It have a bunch of characters and end with `.onion`. This is your `LNADDR_LND_REST_BASE_URL` env variable.
+2. Find your LND REST browser URL `cat umbrel/tor/data/lnd-rest/hostname`. It have a bunch of characters and end with `.onion`. Prepend `https://` and append `:8080` to this values to get `LNADDR_LND_REST_BASE_URL` env variable.
 3. Open your LND Config File `vim umbrel/lnd/lnd.conf`
 4. Under Application Options add an additional `tlsextradomain` line with your hostname from step 2.
 5. Restart your Umbrel. Can be done from your Umbrel's settings UI.
