@@ -1,0 +1,15 @@
+services:
+  # A Docker web service
+  - type: web
+    name: lnaddr
+    env: docker
+    repo: https://github.com/mefatbear/lightning-address-nodejs.git
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: LNADDR_LND_REST_BASE_URL
+        sync: false 
+      - key: LNADDR_LND_REST_MACAROON_HEX
+        sync: false 
+      - key: LNADDR_DOMAIN
+        sync: false 
