@@ -41,6 +41,8 @@ router.get('/lnurlp/:username', async (req, res) => {
       });
       logger.debug('LND Invoice', invoice);
 
+      lightningApi.sendWebhookNotification(invoice);
+
       return res.status(200).json({
         status: 'OK',
         successAction: { tag: 'message', message: 'Thank You!' },

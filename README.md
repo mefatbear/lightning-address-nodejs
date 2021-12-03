@@ -26,11 +26,12 @@ This will allow your to receive lightning address payments. It's like an email a
 
 ## Config
 
-| Env Var                        | Required | Description                                              |
-| ------------------------------ | -------- | -------------------------------------------------------- |
-| `LNADDR_LND_REST_BASE_URL`     | true     | Your LND REST URL e.g. `https://xxxx.onion:8080` address |
-| `LNADDR_LND_REST_MACAROON_HEX` | true     | Create Invoice Macaroon                                  |
-| `LNADDR_DOMAIN`                | true     | Your domain name e.g. `fatbear.me`                       |
+| Env Var                        | Required | Description                                                                                  |
+| ------------------------------ | -------- | -------------------------------------------------------------------------------------------- |
+| `LNADDR_LND_REST_BASE_URL`     | true     | Your LND REST URL e.g. `https://xxxx.onion:8080` address                                     |
+| `LNADDR_LND_REST_MACAROON_HEX` | true     | Create Invoice Macaroon                                                                      |
+| `LNADDR_DOMAIN`                | true     | Your domain name e.g. `fatbear.me`                                                           |
+| `LNADDR_NOTIFICATION_WEBHOOK`  | false    | Webhook URL to receive notifications when invoices are created. e.g. `https://hookb.in/xxxx` |
 
 ## Endpoints
 
