@@ -3,7 +3,6 @@
 A dead simple [Lightning Address](https://www.lightningaddress.com) server for your personal Lightning Node!
 
 This will allow your to receive lightning address payments. It's like an email address but for sats!
-`sats@fatbear.me` is my address!
 
 ## What you need
 
@@ -83,7 +82,3 @@ I highly recommend generating a macaroon with only create invoice permissions. Y
 4. Give `Create Invoice` permissions
 5. Hit `Bake new macaroon` button.
 6. Copy the HEX encoded value
-
-## Support
-
-My Lightning Address `sats@fatbear.me` is powered by the project, think about opening a channel to my [node](https://amboss.space/node/020593994806de7eb9a8ae63d1687bd43abebdd158ac8fcb426ece6571980e09d8).
